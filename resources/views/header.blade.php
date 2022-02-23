@@ -2,11 +2,12 @@
 
 <nav class="navbar">
     <div id="navbar-icon" class="icon"><i class="fa fa-bars"></i></div>
-    <div class="navbar-item"><a href="#">Login</a></div>
-    <div class="navbar-item"><a href="#">User</a></div>
-    <div class="navbar-item"><a href="#">Home</a></div>
-    <div class="navbar-item"><a href="#">About Us</a></div>
-    <div class="navbar-item"><a href="#">Course</a></div>
+    <div class="navbar-item"><a href="{{ url('signup') }}">Sign Up</a></div>
+    <div class="navbar-item"><a href="{{ url('login') }}">Login</a></div>
+    <div class="navbar-item"><a href="{{ url('user') }}">User</a></div>
+    <div class="navbar-item"><a href="{{ url('home') }}">Home</a></div>
+    <div class="navbar-item"><a href="{{ url('aboutus') }}">About Us</a></div>
+    <div class="navbar-item"><a href="{{ url('course') }}">Course</a></div>
 </nav>
 <style>
     .navbar{
