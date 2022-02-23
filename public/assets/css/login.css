@@ -1,0 +1,124 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F5CCFF !important;
+    height: 968px;
+    width: 100%;
+}
+.navbar-brand {
+    font-family: 'berlinsans';
+    font-size: 44px !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 78px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-left: 40px;
+    color: #2C1E30 !important;
+    margin-top: 10px !important;
+}
+
+@font-face {
+    font-family: 'berlinsans';
+    src: url('../font/berlin_sans/berlinsans.ttf');
+    src: url('../font/berlin_sans/berlinsans.ttf') format('ttf'),
+        url('../font/berlin_sans/berlinsans.ttf') format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
+
+
+#header-nav {
+    background-color: #F5CCFF;
+    font-family: 'Inter',
+        sans-serif;
+    font-weight: 500 !important;
+}
+
+#navbarNavDropdown {
+    font-size: 20px !important;
+    margin-top: 70px;
+
+}
+
+.nav-item {
+    margin-left: 40px;
+}
+
+.form-one-label {
+    font-size: 20px;
+    margin-left: 70px !important;
+    font-weight: 400;
+}
+
+.form-control {
+    font-size: 15px !important;
+    width: 400px !important;
+    height: 50px !important;
+    margin-left: 70px !important;
+}
+
+section {
+    background-color: #F5CCFF;
+}
+
+
+
+footer {
+    height: 200px;
+    width: 100%;
+    background-color: #4D095F;
+    margin-top: 200px;
+}
+
+.footer-ollearn {
+    padding-top: 20px;
+    font-family: 'berlinsans';
+    font-size: 44px !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 78px;
+    text-align: left;
+    margin-left: 40px;
+    color: #FBE9FF !important;
+}
+
+.cpy-rgt {
+    color: #FBE9FF !important;
+    font-size: 18px;
+    margin-left: 40px;
+    margin-top: -10px;
+    font-family: 'Inter',
+        sans-serif;
+}
+
+.ToS {
+    color: #FBE9FF !important;
+    font-size: 18px;
+    margin-left: 40px;
+    margin-top: -10px;
+    font-family: 'Inter',
+        sans-serif;
+}
+
+.social-media {
+    color: #FBE9FF !important;
+    font-size: 18px;
+    margin-left: 40px;
+    margin-top: -10px;
+    font-family: 'Inter',
+        sans-serif;
+    margin-left: 900px;
+    margin-top: -120px;
+}
+
+.line {
+    margin-left: 900px;
+    margin-top: -50px;
+}
+
+.photo-sm {
+    margin-left: 900px;
+    margin-top: -30px;
+}
