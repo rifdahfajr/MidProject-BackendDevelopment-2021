@@ -6,7 +6,7 @@
     <div class="navbar-item"><a href="{{ url('login') }}">Login</a></div>
     <div class="navbar-item"><a href="{{ url('user') }}">User</a></div>
     <div class="navbar-item"><a href="{{ url('home') }}">Home</a></div>
-    <div class="navbar-item"><a href="{{ url('aboutus') }}">About Us</a></div>
+    <div class="navbar-item"><a href="{{ url('about') }}">About</a></div>
     <div class="navbar-item"><a href="{{ url('course') }}">Course</a></div>
 </nav>
 <style>

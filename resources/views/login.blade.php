@@ -1,66 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="{{asset("assets/css/login.css")}}">
-
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/font/berlin_sans/berlinsans.ttf">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    {{-- <link rel="icon" type="image/x-icon" href="{{ asset("assets/img/Group.png") }}"> --}}
-    <title>Login</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>log-in</title>
 </head>
 <body>
+    @include("header")
+    @yield('navbar')
 
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light" id="header-nav">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">OL Learn</a>
-        </nav>
-    </header>
-<section>
-        <article>
-                <h3>Login</h3>
-                <img src="{{ asset("assets/img/img-login.png" ) }}"alt="" class="img-login">
-                <fieldset>
-                        <form method="post" action="{{route("login")}}">
-                            @csrf
-                            <div class="form-group">
-                                <label class="form-one-label">Email</label>
-                                <input type="text" name="email"  placeholder="" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-one-label">Password</label>
-                                <input type="password" name="password" id="pass" placeholder="" class="form-control"/>
-                            </div>
-                            <br><br><br><br>
-                            <div class="f1-buttons">
-                                <button type="type" name="submit" id="submit" value="Login" class="btn btn-next text-light" style="font-size: 17px;" >Login</button>
-                            <br><br><br>
-                            <a  href="{{route('password.request')}}" style="font-size: 17px; text-decoration: none; color: #171717" class="forgot">Forgot your password?</a>
-                            </div>
-                            <div class="have-acc-container">
-                            <p id="have-acc" >Don’t have an account?</p>&nbsp;<a style="text-decoration:underline; color: #171717;" href="{{route("register")}}">Register</a>
-                            </div>
-                        </form>
-                    </fieldset>
-        </article>
-    </section>
+    <section class="contact-us">
+        <h1 class="section-title">Login</h1>
+        <form action="#" id="contact-us-form">
+              <div class="form-container">
+                    <label class="form-label" for="name">Username</label>
+                    <input type="text">
+              </div>
+              <div class="form-container">
+                    <label class="form-label" for="password">Password</label>
+                    <input type="password">
+              </div>
+              <input class="button-submit" type="submit" value="submit">
+        </form>
+  </section>
+  <footer>
+    <div class="footer-content"></div>
+          <div class="logo">My Company</div>
+          <div class="footer-detail">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Est quibusdam quo optio consequuntur maiores officiis,
+                      veniam officia nisi voluptatem culpa deserunt a ea,
+                      beatae distinctio, accusamus provident minus magni possimus.
+                </p>
+          </div>
+    <div class="social-media"></div>
+          <a href="https://www.instagram.com">
+                <span class="social-media-icon">
 
-<footer>
-    <p class="footer-ollearn">OL Learn</p>
-    <p class="cpy-rgt">Copyright © 2022, OL Learn</p>
-    <p class="ToS">Privacy Policy & Terms of Service</p>
+                </span>
+          </a>
+          <a href="https:www.facebook.com">
+                <span class="social-media-icon">
 
-    <p class="social-media">Our Social Media</p>
-    <img class= "line" src="{{ asset("assets/img/Line 1.png") }}" alt="">
-    <img class="photo-sm" src="{{ asset("assets/img/Group 45.png")}}" alt="">
-</footer>
+                </span>
+          </a>
+    </footer>
+  <style>
+        .contact-us{
+            padding: 100px;
+        }
 
-    <!-- Javascript -->
-        <script src="{{asset("assets/js/register.js")}}"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/8f7f0da4be.js" crossorigin="anonymous"></script>
+        .form-container{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 5px;
+        }
+
+        .contact-us{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-us>form{
+            width: 50%;
+            padding: 20px;
+            background-color: #FBE9FF;
+            border-radius: 10px;
+        }
+
+        .form-container>span{
+            display: flex;
+            align-items: center;
+            }
+
+        .form-container>span>label{
+            margin-left: 5px;
+        }
+
+        .form-container > input,
+        .form-container > textarea{
+            padding: 5px 10px;
+            border-radius: 5px;
+            border-style: none;
+        }
+        .button-submit{
+            padding: 10px;
+            border-style: none;
+            background-color: #4D095F;
+            border-radius: 10px;
+            color:white;
+            margin-top: 10px;
+        }
+        .contact-us >h1{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        footer{
+      display: flex;
+      flex-direction: row;
+      background-color: goldenrod;
+      color: white;
+      padding: 200px;
+      margin-top: 300px;
+      background-size: 1cm;
+}
+.footer-content{
+      width: 50%;
+}
+
+.logo{
+      font-size: 30px;
+      font-weight: 600;
+}
+.footer-detail{
+      font-size: 14px;
+      text-align: justify;
+}
+.social-media {
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+}
+
+  </style>
+
+
+
 </body>
 </html>

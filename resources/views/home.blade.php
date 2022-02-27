@@ -46,7 +46,5 @@
         </style>
   </section>
 
-  @include("footer")
-  @yield('footer')
 </body>
 </html>
