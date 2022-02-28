@@ -12,39 +12,45 @@
 
     <section class="home">
         <div class="home-info">
-              <div class="name">Online Learning</div>
-              <p class="description">Our online learning</p>
+              <div class="name">WELCOME</div>
+              <p class="description">ONLINE LEARNING</p>
         </div>
-        <style>
-            .home{
-            height: 500px;
-            background-color: #FBE9FF;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            /* padding-top: 200px;
-            padding-left: 100px; */
-            display: flex;
-            align-items: center;
-            /* margin-top: 70px; */
-            }
-
-            .home-info{
-            background-color: rgba(255, 255, 255, 0.5);
-            width: fit-content;
-            padding: 20px;
-            border-radius: 10px;
-            }
-
-            .name{
-            font-size: 50px;
-            font-weight: 600;
-            }
-            .description{
-            font-size: 25px;
-            }
-        </style>
   </section>
+  <section class="home">
+    
+</section>
+  <style>
+    .home{
+    height: 500px;
+    background-color: #FBE9FF;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* padding-top: 200px;
+    padding-left: 100px; */
+    display: flex;
+    align-items: center;
+    /* margin-top: 70px; */
+    /* padding-top: 20px; */
+    }
 
+    .home-info{
+    background-color: #4D095F;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 0;
+    }
+
+    .name{
+    font-size: 50px;
+    font-weight: 600;
+    color: white;
+    }
+    .description{
+    font-size: 25px;
+    color: white;
+    }
+</style>
 </body>
 </html>

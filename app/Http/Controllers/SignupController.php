@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class SignupController extends Controller
 {
     public function getSignUp() {
-        return view('signups');
+        return view('signup');
     }
 
     public function signupUser(Request $request){
@@ -23,6 +23,23 @@ class SignupController extends Controller
             'birthdate' => $request->birthdate,
         ]);
 
-        return redirect(route('getSignUp'));
+        return redirect(route('getLogin'));
+    }
+    public function store(Request $request){
+        $validatedData = $request->validate([
+            'fullname' => 'required|min:10|max:45',
+            'username' => 'required|min:3|max:15',
+            'password' => 'required|min:8|max:20',
+            'confirmpassword' => 'required|min:8|max:20',
+        ]);
+
+        dd($request);
+        $validatedData['password'] = bcrypt($validatedData['password']);
+        $validatedData['confirmpassword'] = bcrypt($validatedData['confirmpassword']);
+
+        Signup::create($validatedData);
+
+        $request->session()->flash('success', 'Registration successfull! Please Login');
+        return redirect('/login');
     }
 }

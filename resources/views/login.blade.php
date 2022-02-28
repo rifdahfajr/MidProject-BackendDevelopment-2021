@@ -10,44 +10,34 @@
     @include("header")
     @yield('navbar')
 
-    <section class="contact-us">
+    <section class="log-in">
         <h1 class="section-title">Login</h1>
-        <form action="#" id="contact-us-form">
+        <form action="{{ route('loginUser') }}" method="post" enctype="multipart/form-data" id="log-in-form">
+            @csrf
               <div class="form-container">
-                    <label class="form-label" for="name">Username</label>
-                    <input type="text">
+                    <label class="form-label" for="username">Username</label>
+                    <input type="text" name="username" @error('username') is-invalid
+                    @enderror id="password" autofocus required>
+                    @error('username')
+                        <div class="invalid feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
               </div>
               <div class="form-container">
                     <label class="form-label" for="password">Password</label>
-                    <input type="password">
+                    <input type="password" name="password" id="password" required>
               </div>
-              <input class="button-submit" type="submit" value="submit">
+
+              <input class="button-submit" type="submit" value="Log In">
         </form>
+        <small>Not registered?
+            <a href="/signup">Register Now!</a>
+        </small>
   </section>
-  <footer>
-    <div class="footer-content"></div>
-          <div class="logo">My Company</div>
-          <div class="footer-detail">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Est quibusdam quo optio consequuntur maiores officiis,
-                      veniam officia nisi voluptatem culpa deserunt a ea,
-                      beatae distinctio, accusamus provident minus magni possimus.
-                </p>
-          </div>
-    <div class="social-media"></div>
-          <a href="https://www.instagram.com">
-                <span class="social-media-icon">
 
-                </span>
-          </a>
-          <a href="https:www.facebook.com">
-                <span class="social-media-icon">
-
-                </span>
-          </a>
-    </footer>
-  <style>
-        .contact-us{
+    <style>
+        .log-in{
             padding: 100px;
         }
 
@@ -57,13 +47,13 @@
             margin-bottom: 5px;
         }
 
-        .contact-us{
+        .log-in{
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        .contact-us>form{
+        .log-in>form{
             width: 50%;
             padding: 20px;
             background-color: #FBE9FF;
@@ -93,40 +83,11 @@
             color:white;
             margin-top: 10px;
         }
-        .contact-us >h1{
+        .log-in >h1{
             text-align: center;
             margin-bottom: 20px;
         }
-
-        footer{
-      display: flex;
-      flex-direction: row;
-      background-color: goldenrod;
-      color: white;
-      padding: 200px;
-      margin-top: 300px;
-      background-size: 1cm;
-}
-.footer-content{
-      width: 50%;
-}
-
-.logo{
-      font-size: 30px;
-      font-weight: 600;
-}
-.footer-detail{
-      font-size: 14px;
-      text-align: justify;
-}
-.social-media {
-      width: 50%;
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
-}
-
-  </style>
+    </style>
 
 
 

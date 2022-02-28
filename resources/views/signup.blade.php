@@ -24,11 +24,11 @@
                 </div>
                 <div class="form-container">
                     <label class="form-label" for="password">Password</label>
-                    <input name="password" type="text" placeholder="input password">
+                    <input name="password" type="password" placeholder="input password">
                 </div>
                 <div class="form-container">
                     <label class="form-label" for="confirmpassword">Confirm Password</label>
-                    <input name="confirmpassword" type="text" placeholder="input confirm password">
+                    <input name="confirmpassword" type="password" placeholder="input confirm password">
                 </div>
                 <div class="form-container">
                     <label class="form-label" for="address">Address</label>
@@ -47,7 +47,7 @@
                     <input name="birthdate" type="date" placeholder="input birth date">
                 </div>
               {{-- <input class="button-submit" type="submit" value="submit"> --}}
-              <button type="submit" class="button-submit" >Submit</button>
+              <button type="submit" class="button-submit" >Sign Up</button>
         </form>
 
   </section>

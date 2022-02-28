@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\SignupController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\CourseController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,10 +28,15 @@ Route::get('/signup', [SignupController::class, 'getSignUp'])->name('getSignUp')
 
 Route::post('/signup-user', [SignupController::class, 'signupUser'])->name('signupUser');
 
-Route::get('/login', function (){
-    return view('login');
+Route::get('/login', [LoginController::class, 'getLogin'])->name('getLogin');
+Route::post('/login', [LoginController::class, 'loginUser'])->name('loginUser');
+
+Route::get('/user', function (){
+    return view('user');
 });
 
-Route::get('/course', function (){
-    return view('course');
+Route::get('/about', function (){
+    return view('about');
 });
+
+Route::get('/course', [CourseController::class, 'getCourse']);
